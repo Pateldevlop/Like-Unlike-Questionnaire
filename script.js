@@ -199,6 +199,70 @@ const sections = [
                     "Fruit",
                     "Baked goods (cookies, muffins)"
                 ]
+            },
+            {
+                question: "Chocolate intensity preference?",
+                icon: "fa-cookie-bite",
+                options: [
+                    "White chocolate (sweet & creamy)",
+                    "Milk chocolate (classic balance)",
+                    "Dark chocolate (60%–70% cacao)",
+                    "Extra dark (80%+ cacao)",
+                    "I don't like chocolate"
+                ]
+            },
+            {
+                question: "Favorite Korean main dish?",
+                icon: "fa-bowl-rice",
+                options: [
+                    "Bibimbap (Mixed rice bowl)",
+                    "Bulgogi (Marinated BBQ beef)",
+                    "Tteokbokki (Spicy rice cakes)",
+                    "Jajangmyeon (Black bean noodles)",
+                    "Korean Fried Chicken"
+                ]
+            },
+            {
+                question: "Korean spice tolerance?",
+                icon: "fa-fire",
+                options: [
+                    "Mild (Flavorful, no heat)",
+                    "Medium (A gentle kick)",
+                    "Hot (Buldak/Spicy Ramen level)",
+                    "Extreme (The spicier, the better!)"
+                ]
+            },
+            {
+                question: "Chocolate pairing preference?",
+                icon: "fa-layer-group",
+                options: [
+                    "Sea Salt & Caramel",
+                    "Fruit (Strawberry/Orange)",
+                    "Nuts (Almond/Hazelnut)",
+                    "Mint",
+                    "Pure (No additions)"
+                ]
+            },
+            {
+                question: "Favorite Korean snack/street food?",
+                icon: "fa-hotdog",
+                options: [
+                    "Korean Corn Dog",
+                    "Gimbap (Seaweed rolls)",
+                    "Hotteok (Sweet pancakes)",
+                    "Bungeo-ppang (Fish-shaped pastry)",
+                    "Kimchi Mandu (Dumplings)"
+                ]
+            },
+            {
+                question: "Sweet or Savory preference?",
+                icon: "fa-candy-cane",
+                options: [
+                    "Always Sweet",
+                    "Strictly Savory",
+                    "A mix of both (Sweet & Salty)",
+                    "Depends on the mood"
+                ]
             }
         ]
     },

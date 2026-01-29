@@ -263,6 +263,106 @@ const sections = [
                     "A mix of both (Sweet & Salty)",
                     "Depends on the mood"
                 ]
+            },
+            {
+                question: "Top Fast Food craving?",
+                icon: "fa-burger",
+                options: [
+                    "Burgers & Fries",
+                    "Fried Chicken/Nuggets",
+                    "Pizza",
+                    "Tacos/Burritos",
+                    "Sandwiches/Subs",
+                    "Hot Dogs"
+                ]
+            },
+            {
+                question: "Pizza topping style?",
+                icon: "fa-pizza-slice",
+                options: [
+                    "Classic Pepperoni",
+                    "Margherita (Basil & Cheese)",
+                    "BBQ Chicken",
+                    "Veggie Supreme",
+                    "Hawaiian (Pineapple/Ham)",
+                    "Meat Lovers"
+                ]
+            },
+            {
+                question: "Fry/Side preference?",
+                icon: "fa-pepper-hot",
+                options: [
+                    "Classic Salted Fries",
+                    "Curly/Waffle Fries",
+                    "Onion Rings",
+                    "Cheese Curds/Mozzarella Sticks",
+                    "Loaded Fries (Cheese/Bacon)"
+                ]
+            },
+            {
+                question: "What’s your go-to comfort food?",
+                icon: "fa-heart",
+                options: [
+                    "Pasta/Italian",
+                    "Sushi/Japanese",
+                    "Spicy Korean Food",
+                    "Homemade Comfort Meals",
+                    "Ice Cream/Desserts"
+                ]
+            },
+            {
+                question: "What’s your coffee/drink order?",
+                icon: "fa-mug-hot",
+                options: [
+                    "Iced Latte/Cold Brew",
+                    "Hot Cappuccino/Latte",
+                    "Fruit Smoothie/Boba",
+                    "Green/Herbal Tea",
+                    "Hot Chocolate"
+                ]
+            },
+            {
+                question: "What’s your go-to 'Cheat Meal' pick?",
+                icon: "fa-bag-shopping",
+                options: [
+                    "McDonald's/Burger King",
+                    "KFC/Fried Chicken",
+                    "Pizza Night",
+                    "Street Tacos",
+                    "Chinese Takeout"
+                ]
+            },
+            {
+                question: "If you’re hangry, what do you need?",
+                icon: "fa-face-angry",
+                options: [
+                    "Something Salty (Chips)",
+                    "Something Sweet (Chocolate)",
+                    "A full meal immediately",
+                    "A refreshing drink"
+                ]
+            },
+            {
+                question: "Ultimate Chocolate Dessert?",
+                icon: "fa-cake-candles",
+                options: [
+                    "Warm Choco Lava Cake",
+                    "Double Choco Brownies",
+                    "Chocolate Mousse/Pudding",
+                    "Chocolate Chip Cookies",
+                    "Dark Choco Truffles"
+                ]
+            },
+            {
+                question: "Korean BBQ Meat preference?",
+                icon: "fa-drumstick-bite",
+                options: [
+                    "Samgyeopsal (Pork Belly)",
+                    "Bulgogi (Sliced Beef)",
+                    "Galbi (Short Ribs)",
+                    "Dakgalbi (Spicy Chicken)",
+                    "I prefer vegetarian options"
+                ]
             }
         ]
     },
@@ -527,6 +627,38 @@ const sections = [
                     "Tech gadget",
                     "Clothing or shoes",
                     "Nothing specific - I usually get what I want"
+                ]
+            },
+            {
+                question: "What does she value most in a gift?",
+                icon: "fa-gift",
+                options: [
+                    "Practicality (Something she can use)",
+                    "Sentiment (Something with a memory)",
+                    "Luxury (Something high-end/special)",
+                    "Experience (Tickets/Vouchers)",
+                    "Handmade/DIY effort"
+                ]
+            },
+            {
+                question: "Favorite way to capture memories?",
+                icon: "fa-camera-retro",
+                options: [
+                    "Taking endless photos/videos",
+                    "Keeping physical mementos (tickets/cards)",
+                    "Journaling/Writing about it",
+                    "Just living in the moment (no photos)"
+                ]
+            },
+            {
+                question: "Long-term goal focus?",
+                icon: "fa-bullseye",
+                options: [
+                    "Career growth & success",
+                    "Travel & seeing the world",
+                    "Building a cozy/happy home",
+                    "Creative fulfillment/Hobbies",
+                    "Personal health & wellness"
                 ]
             }
         ]

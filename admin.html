@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - View Responses</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .admin-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .admin-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .admin-header h1 {
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        .login-section {
+            max-width: 400px;
+            margin: 100px auto;
+        }
+
+        .form-control {
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 12px 20px;
+            margin-bottom: 15px;
+        }
+
+        .btn-login {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 50px;
+            padding: 12px 40px;
+            color: white;
+            font-weight: 600;
+            width: 100%;
+        }
+
+        .submission-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+        }
+
+        .submission-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .submission-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .submission-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .response-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .response-category {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+
+        .response-question {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .response-answer {
+            color: #e91e63;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .response-comment {
+            color: #666;
+            font-style: italic;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+
+        .export-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-weight: 600;
+            margin: 10px 5px;
+        }
+
+        .delete-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-weight: 600;
+            margin: 10px 5px;
+        }
+
+        .no-submissions {
+            text-align: center;
+            padding: 50px;
+            color: #666;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 5px solid #667eea;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen">
+        <div class="login-section">
+            <div class="admin-card">
+                <div class="admin-header">
+                    <h1><i class="fas fa-lock me-2"></i>Admin Login</h1>
+                    <p class="text-muted">Enter password to view responses</p>
+                </div>
+                <input type="password" id="adminPassword" class="form-control" placeholder="Enter password" onkeypress="handleKeyPress(event)">
+                <button class="btn-login" onclick="login()">Login <i class="fas fa-arrow-right ms-2"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" style="display: none;">
+        <div class="container">
+            <div class="admin-card">
+                <div class="admin-header">
+                    <h1><i class="fas fa-chart-bar me-2"></i>Response Dashboard</h1>
+                    <p class="text-muted">View all questionnaire submissions</p>
+                </div>
+
+                <!-- Statistics -->
+                <div class="stats-grid" id="statsGrid"></div>
+
+                <!-- Export Buttons -->
+                <div class="text-center mb-4">
+                    <button class="export-btn" onclick="exportToText()">
+                        <i class="fas fa-file-text me-2"></i>Export to Text
+                    </button>
+                    <button class="export-btn" onclick="exportToJSON()">
+                        <i class="fas fa-file-code me-2"></i>Export to JSON
+                    </button>
+                    <button class="delete-btn" onclick="clearAllData()">
+                        <i class="fas fa-trash me-2"></i>Clear All Data
+                    </button>
+                </div>
+
+                <!-- Submissions List -->
+                <div id="submissionsList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    
+    <script>
+        // Set your password here (change this to whatever you want)
+        const ADMIN_PASSWORD = 'iloveyou123';
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                login();
+            }
+        }
+
+        function login() {
+            const password = $('#adminPassword').val();
+            if (password === ADMIN_PASSWORD) {
+                $('#loginScreen').hide();
+                $('#adminPanel').show();
+                loadSubmissions();
+            } else {
+                alert('Incorrect password!');
+                $('#adminPassword').val('');
+            }
+        }
+
+        function loadSubmissions() {
+            const submissions = JSON.parse(localStorage.getItem('questionnaire_submissions') || '[]');
+            
+            if (submissions.length === 0) {
+                $('#submissionsList').html(`
+                    <div class="no-submissions">
+                        <i class="fas fa-inbox" style="font-size: 4rem; color: #ccc; margin-bottom: 20px;"></i>
+                        <h3>No submissions yet</h3>
+                        <p>Responses will appear here once someone completes the questionnaire.</p>
+                    </div>
+                `);
+                
+                $('#statsGrid').html(`
+                    <div class="stat-card">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Total Responses</div>
+                    </div>
+                `);
+                return;
+            }
+
+            // Display statistics
+            displayStats(submissions);
+
+            // Display submissions
+            let html = '';
+            submissions.reverse().forEach((submission, index) => {
+                const date = new Date(submission.timestamp);
+                html += `
+                    <div class="submission-card">
+                        <div class="submission-header">
+                            <div>
+                                <div class="submission-name">
+                                    <i class="fas fa-user-circle me-2"></i>${submission.userName}
+                                </div>
+                                <div class="submission-date">
+                                    <i class="fas fa-calendar me-1"></i>${date.toLocaleDateString()}
+                                    <i class="fas fa-clock ms-3 me-1"></i>${date.toLocaleTimeString()}
+                                </div>
+                            </div>
+                            <button class="delete-btn" onclick="deleteSubmission(${submissions.length - 1 - index})" style="padding: 8px 20px;">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        ${generateResponsesHTML(submission.responses)}
+                    </div>
+                `;
+            });
+
+            $('#submissionsList').html(html);
+        }
+
+        function displayStats(submissions) {
+            const totalResponses = submissions.length;
+            const latestSubmission = submissions[submissions.length - 1];
+            const latestDate = new Date(latestSubmission.timestamp).toLocaleDateString();
+
+            $('#statsGrid').html(`
+                <div class="stat-card">
+                    <div class="stat-number">${totalResponses}</div>
+                    <div class="stat-label">Total Responses</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${latestSubmission.userName}</div>
+                    <div class="stat-label">Latest Response</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${latestDate}</div>
+                    <div class="stat-label">Last Updated</div>
+                </div>
+            `);
+        }
+
+        function generateResponsesHTML(responses) {
+            let html = '';
+            let currentCategory = '';
+
+            responses.forEach((response) => {
+                if (response.category !== currentCategory) {
+                    currentCategory = response.category;
+                    if (html !== '') html += '<hr style="margin: 20px 0;">';
+                }
+
+                html += `
+                    <div class="response-item">
+                        <span class="response-category">${response.category}</span>
+                        <div class="response-question">
+                            <i class="fas fa-question-circle me-2"></i>${response.question}
+                        </div>
+                        <div class="response-answer">
+                            <i class="fas fa-check-circle me-2"></i>${response.answer}
+                        </div>
+                        ${response.comment ? `
+                            <div class="response-comment">
+                                <i class="fas fa-comment-dots me-2"></i>${response.comment}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            });
+
+            return html;
+        }
+
+        function exportToText() {
+            const submissions = JSON.parse(localStorage.getItem('questionnaire_submissions') || '[]');
+            
+            if (submissions.length === 0) {
+                alert('No submissions to export!');
+                return;
+            }
+
+            let text = 'QUESTIONNAIRE RESPONSES\n';
+            text += '='.repeat(50) + '\n\n';
+
+            submissions.forEach((submission, index) => {
+                text += `SUBMISSION #${index + 1}\n`;
+                text += '-'.repeat(50) + '\n';
+                text += `Name: ${submission.userName}\n`;
+                text += `Gender: ${submission.userGender}\n`;
+                text += `Date: ${new Date(submission.timestamp).toLocaleString()}\n\n`;
+                
+                let currentCategory = '';
+                submission.responses.forEach((r, i) => {
+                    if (r.category !== currentCategory) {
+                        currentCategory = r.category;
+                        text += `\n[${currentCategory}]\n`;
+                        text += '='.repeat(currentCategory.length + 2) + '\n\n';
+                    }
+                    
+                    text += `Q: ${r.question}\n`;
+                    text += `A: ${r.answer}\n`;
+                    if (r.comment) {
+                        text += `Comment: ${r.comment}\n`;
+                    }
+                    text += '\n';
+                });
+                
+                text += '\n\n';
+            });
+
+            downloadFile('questionnaire-responses.txt', text);
+        }
+
+        function exportToJSON() {
+            const submissions = JSON.parse(localStorage.getItem('questionnaire_submissions') || '[]');
+            
+            if (submissions.length === 0) {
+                alert('No submissions to export!');
+                return;
+            }
+
+            const jsonStr = JSON.stringify(submissions, null, 2);
+            downloadFile('questionnaire-responses.json', jsonStr);
+        }
+
+        function downloadFile(filename, content) {
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function deleteSubmission(index) {
+            if (confirm('Are you sure you want to delete this submission?')) {
+                const submissions = JSON.parse(localStorage.getItem('questionnaire_submissions') || '[]');
+                submissions.splice(index, 1);
+                localStorage.setItem('questionnaire_submissions', JSON.stringify(submissions));
+                loadSubmissions();
+            }
+        }
+
+        function clearAllData() {
+            if (confirm('Are you sure you want to delete ALL submissions? This cannot be undone!')) {
+                if (confirm('Really sure? This will permanently delete all data!')) {
+                    localStorage.removeItem('questionnaire_submissions');
+                    loadSubmissions();
+                    alert('All data has been cleared!');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

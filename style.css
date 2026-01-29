@@ -378,13 +378,12 @@ body {
 
 /* Navigation Buttons */
 .navigation-buttons {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 15px;
 }
 
 .navigation-buttons .btn {
-    flex: 1;
     border-radius: 50px;
     padding: 12px 30px;
     font-size: 1.1rem;
@@ -400,6 +399,16 @@ body {
 .btn-secondary:hover {
     background: #5a6268;
     transform: translateY(-2px);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    border: none;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(40, 167, 69, 0.4);
 }
 
 .btn-primary {
@@ -546,7 +555,11 @@ body {
     }
     
     .navigation-buttons {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+    
+    .navigation-buttons .btn {
+        width: 100%;
     }
 }
 

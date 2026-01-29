@@ -267,226 +267,182 @@ const sections = [
                     "Dancing",
                     "Swimming",
                     "Team sports",
-                    "I don't exercise regularly"
+                    "I prefer not to exercise"
+                ]
+            },
+            {
+                question: "Ideal weekend activity?",
+                icon: "fa-calendar-day",
+                options: [
+                    "Outdoor adventure (hiking, beach, park)",
+                    "Shopping",
+                    "Staying home and relaxing",
+                    "Going out with friends",
+                    "Trying new restaurants/cafes",
+                    "Cultural activities (museums, theater)"
+                ]
+            },
+            {
+                question: "Social media preference?",
+                icon: "fa-hashtag",
+                options: [
+                    "Instagram",
+                    "TikTok",
+                    "Facebook",
+                    "Twitter/X",
+                    "Pinterest",
+                    "I'm not very active on social media"
                 ]
             }
         ]
     },
     {
-        title: "Home, Tech & Lifestyle",
-        icon: "fa-house",
+        title: "Tech & Gadgets",
+        icon: "fa-mobile",
         questions: [
             {
-                question: "Room aesthetic?",
-                icon: "fa-house",
+                question: "Phone brand?",
+                icon: "fa-mobile-screen-button",
                 options: [
-                    "Minimalist/modern",
-                    "Cozy/warm",
-                    "Colorful/eclectic",
-                    "Vintage/retro",
-                    "Nature-inspired"
+                    "iPhone",
+                    "Samsung",
+                    "Google Pixel",
+                    "Other Android",
+                    "I don't care about brands"
                 ]
             },
             {
-                question: "Favorite scent for home?",
-                icon: "fa-fire",
+                question: "Headphones/earbuds preference?",
+                icon: "fa-headphones",
                 options: [
-                    "Vanilla",
-                    "Lavender",
-                    "Fresh linen",
-                    "Citrus",
-                    "Floral",
-                    "Woodsy/pine",
-                    "Cinnamon/spice"
+                    "AirPods/wireless earbuds",
+                    "Over-ear headphones",
+                    "Wired earphones",
+                    "I don't use headphones often"
                 ]
             },
             {
-                question: "Comfort item?",
-                icon: "fa-couch",
+                question: "Laptop/tablet use?",
+                icon: "fa-laptop",
                 options: [
-                    "Cozy blankets",
-                    "Soft pillows",
-                    "Plush robe",
-                    "Scented candles",
-                    "Stuffed animals"
+                    "I use it daily for work/study",
+                    "Occasionally for entertainment",
+                    "Rarely - I prefer my phone",
+                    "I have one but barely use it"
                 ]
             },
             {
-                question: "Are you a plant person?",
-                icon: "fa-leaf",
+                question: "Smart home devices?",
+                icon: "fa-house-signal",
                 options: [
-                    "Yes, I love plants",
-                    "Yes, but low-maintenance ones",
-                    "I want to be but struggle",
-                    "No, I prefer fake plants",
+                    "Yes, I love them (Alexa, Google Home, etc.)",
+                    "I have a few",
+                    "Interested but don't have any yet",
                     "Not interested"
                 ]
             },
             {
-                question: "Phone type?",
-                icon: "fa-mobile-screen",
+                question: "Fitness tracker?",
+                icon: "fa-heart-pulse",
                 options: [
-                    "iPhone",
-                    "Android (Samsung, Google, etc.)",
-                    "Other"
+                    "Yes, smartwatch with fitness features",
+                    "Yes, dedicated fitness tracker",
+                    "Just use phone apps",
+                    "Don't track fitness"
                 ]
             },
             {
-                question: "Headphones preference?",
-                icon: "fa-headphones",
+                question: "Photography?",
+                icon: "fa-camera",
                 options: [
-                    "Wireless earbuds (AirPods, etc.)",
-                    "Over-ear headphones",
-                    "Wired earphones",
-                    "I don't use headphones much"
-                ]
-            },
-            {
-                question: "Tech interest?",
-                icon: "fa-laptop",
-                options: [
-                    "I love the latest gadgets",
-                    "I use tech but not obsessed",
-                    "I prefer simple/basic tech",
-                    "Not tech-savvy"
+                    "Love it - have a good camera",
+                    "Enjoy it - phone camera is enough",
+                    "Only for special occasions",
+                    "Not really into photography"
                 ]
             }
         ]
     },
     {
-        title: "Personal Preferences & Dreams",
+        title: "Personal Preferences",
         icon: "fa-heart",
         questions: [
             {
-                question: "Gift preference?",
-                icon: "fa-gift",
+                question: "Seasonal preference?",
+                icon: "fa-cloud-sun",
                 options: [
-                    "Practical/useful items",
-                    "Sentimental/meaningful gifts",
-                    "Experiences (concerts, trips, dinners)",
-                    "Handmade/personalized items",
-                    "Surprise me!"
-                ]
-            },
-            {
-                question: "Flowers preference?",
-                icon: "fa-flower",
-                options: [
-                    "Roses",
-                    "Tulips",
-                    "Sunflowers",
-                    "Lilies",
-                    "Orchids",
-                    "Mixed bouquets",
-                    "I prefer plants/succulents",
-                    "Not really into flowers"
-                ]
-            },
-            {
-                question: "Do you journal or write?",
-                icon: "fa-pen",
-                options: [
-                    "Yes, regularly",
-                    "Sometimes",
-                    "I want to start",
-                    "No"
-                ]
-            },
-            {
-                question: "Collections or hobbies?",
-                icon: "fa-star",
-                options: [
-                    "I collect (stamps, coins, figures, etc.)",
-                    "I have creative hobbies",
-                    "I'm into photography",
-                    "I don't really collect anything"
+                    "Spring (flowers, mild weather)",
+                    "Summer (beach, sunshine)",
+                    "Fall (cozy, pumpkin spice)",
+                    "Winter (snow, holidays)"
                 ]
             },
             {
                 question: "Morning or night person?",
-                icon: "fa-sun",
+                icon: "fa-moon",
                 options: [
-                    "Definitely morning person",
-                    "Night owl",
+                    "Early bird (love mornings)",
+                    "Night owl (evenings are my time)",
                     "Depends on the day"
                 ]
             },
             {
-                question: "Favorite season?",
-                icon: "fa-snowflake",
-                options: [
-                    "Spring",
-                    "Summer",
-                    "Fall/Autumn",
-                    "Winter"
-                ]
-            },
-            {
-                question: "Travel preference?",
+                question: "Dream vacation?",
                 icon: "fa-plane",
                 options: [
-                    "Beach/tropical destinations",
-                    "Mountains/hiking",
-                    "City exploration/shopping",
-                    "Cultural/historical sites",
-                    "Adventure/thrill activities",
-                    "Relaxing spa/resort"
+                    "Beach resort (relaxation, sun, sand)",
+                    "European city tour (culture, history)",
+                    "Adventure trip (hiking, safari, exploration)",
+                    "Staycation (exploring locally, relaxing at home)",
+                    "Tropical paradise (islands, exotic locations)"
                 ]
             },
             {
-                question: "Ideal date?",
+                question: "Plants/flowers?",
+                icon: "fa-seedling",
+                options: [
+                    "Love them - have several at home",
+                    "Like them but always forget to water",
+                    "Prefer low-maintenance plants",
+                    "Not really a plant person"
+                ]
+            },
+            {
+                question: "Candles/room scents?",
+                icon: "fa-fire",
+                options: [
+                    "Yes, love vanilla scents",
+                    "Yes, love floral scents",
+                    "Yes, love fresh/clean scents",
+                    "Yes, love fruity scents",
+                    "Not really into scents"
+                ]
+            },
+            {
+                question: "Pet preference?",
+                icon: "fa-paw",
+                options: [
+                    "Dogs",
+                    "Cats",
+                    "Both",
+                    "Other pets (birds, fish, etc.)",
+                    "Not a pet person"
+                ]
+            },
+            {
+                question: "Art preference?",
+                icon: "fa-palette",
+                options: [
+                    "Modern/abstract",
+                    "Classic/traditional",
+                    "Photography",
+                    "Street art/pop art",
+                    "Not really into art"
+                ]
+            },
+            {
+                question: "Comfort item when stressed?",
                 icon: "fa-heart",
-                options: [
-                    "Dinner at a nice restaurant",
-                    "Movie and chill",
-                    "Outdoor adventure",
-                    "Concert/live show",
-                    "Cozy night in",
-                    "Something spontaneous"
-                ]
-            },
-            {
-                question: "Weekend activity?",
-                icon: "fa-calendar",
-                options: [
-                    "Going out (shopping, eating, exploring)",
-                    "Staying in (movies, games, relaxing)",
-                    "Social (hanging with friends)",
-                    "Mix of both"
-                ]
-            },
-            {
-                question: "What makes you feel most loved?",
-                icon: "fa-heart",
-                options: [
-                    "Quality time together",
-                    "Physical touch/affection",
-                    "Words of affirmation",
-                    "Acts of service",
-                    "Receiving gifts"
-                ]
-            }
-        ]
-    },
-    {
-        title: "Dreams & Wishes",
-        icon: "fa-star",
-        questions: [
-            {
-                question: "What's your dream gift?",
-                icon: "fa-star",
-                options: [
-                    "Something handmade and personal",
-                    "A surprise trip or adventure",
-                    "Jewelry or accessories",
-                    "Tech gadget I've been wanting",
-                    "Something you noticed I needed",
-                    "An experience we can share together"
-                ]
-            },
-            {
-                question: "What's your comfort activity after a stressful day?",
-                icon: "fa-spa",
                 options: [
                     "Taking a relaxing bath",
                     "Watching favorite shows/movies",
@@ -518,9 +474,23 @@ let currentSectionIndex = 0;
 let userName = '';
 let userGender = '';
 let answers = {};
+let shuffledSections = [];
+let autoSaveTimer = null;
+
+// Utility function to shuffle array
+function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
 
 // Initialize
 $(document).ready(function() {
+    // Load saved progress if exists
+    loadSavedProgress();
     $('#totalSections').text(sections.length);
     updatePrevButton();
 });
@@ -540,16 +510,28 @@ function startQuestionnaire() {
         return;
     }
     
+    // Save user info
+    localStorage.setItem('questionnaire_userName', userName);
+    localStorage.setItem('questionnaire_userGender', userGender);
+    
+    // Create shuffled sections (shuffle questions within each section)
+    shuffledSections = sections.map(section => ({
+        ...section,
+        questions: shuffleArray(section.questions)
+    }));
+    
     // Initialize answers object
-    sections.forEach((section, sIndex) => {
+    shuffledSections.forEach((section, sIndex) => {
         section.questions.forEach((q, qIndex) => {
             const key = `${sIndex}-${qIndex}`;
-            answers[key] = {
-                section: section.title,
-                question: q.question,
-                answer: null,
-                comment: ''
-            };
+            if (!answers[key]) {
+                answers[key] = {
+                    section: section.title,
+                    question: q.question,
+                    answer: null,
+                    comment: ''
+                };
+            }
         });
     });
     
@@ -559,15 +541,18 @@ function startQuestionnaire() {
     
     // Load first section
     loadSection(0);
+    
+    // Start auto-save
+    startAutoSave();
 }
 
 // Load Section
 function loadSection(index) {
     currentSectionIndex = index;
-    const section = sections[index];
+    const section = shuffledSections[index];
     
     // Update progress
-    const progress = ((index + 1) / sections.length) * 100;
+    const progress = ((index + 1) / shuffledSections.length) * 100;
     $('#progressBar').css('width', progress + '%');
     $('#currentSection').text(index + 1);
     
@@ -627,7 +612,7 @@ function loadSection(index) {
 function getOverallQuestionNumber(sectionIndex, questionIndex) {
     let number = 1;
     for (let i = 0; i < sectionIndex; i++) {
-        number += sections[i].questions.length;
+        number += shuffledSections[i].questions.length;
     }
     return number + questionIndex;
 }
@@ -648,33 +633,180 @@ $(document).on('click', '.option-btn', function() {
     
     // Update next button
     updateNextButton();
+    
+    // Trigger auto-save
+    triggerAutoSave();
 });
 
 // Save comments on change
 $(document).on('input', '.comment-box', function() {
     const key = $(this).data('key');
     answers[key].comment = $(this).val().trim();
+    
+    // Trigger auto-save
+    triggerAutoSave();
 });
 
-// Next Section
-function nextSection() {
-    // Check if all questions in current section are answered
-    const currentSection = sections[currentSectionIndex];
-    let allAnswered = true;
+// Auto-save functionality
+function startAutoSave() {
+    // Auto-save every 30 seconds
+    autoSaveTimer = setInterval(() => {
+        saveProgress();
+    }, 30000);
+}
+
+function triggerAutoSave() {
+    // Clear existing timer
+    if (autoSaveTimer) {
+        clearInterval(autoSaveTimer);
+    }
+    
+    // Save immediately
+    saveProgress();
+    
+    // Restart timer
+    startAutoSave();
+}
+
+function saveProgress() {
+    const progressData = {
+        currentSectionIndex: currentSectionIndex,
+        userName: userName,
+        userGender: userGender,
+        answers: answers,
+        shuffledSections: shuffledSections,
+        lastSaved: new Date().toISOString()
+    };
+    
+    localStorage.setItem('questionnaire_progress', JSON.stringify(progressData));
+    
+    // Show save indicator (optional)
+    showSaveIndicator();
+}
+
+function showSaveIndicator() {
+    // Create a subtle save indicator
+    if ($('#saveIndicator').length === 0) {
+        $('body').append('<div id="saveIndicator" style="position: fixed; top: 20px; right: 20px; background: rgba(102, 126, 234, 0.9); color: white; padding: 10px 20px; border-radius: 50px; font-size: 14px; z-index: 9999; display: none;"><i class="fas fa-check-circle me-2"></i>Saved</div>');
+    }
+    
+    $('#saveIndicator').fadeIn(300).delay(1500).fadeOut(300);
+}
+
+function loadSavedProgress() {
+    const savedProgress = localStorage.getItem('questionnaire_progress');
+    const savedUserName = localStorage.getItem('questionnaire_userName');
+    const savedUserGender = localStorage.getItem('questionnaire_userGender');
+    
+    if (savedProgress) {
+        const data = JSON.parse(savedProgress);
+        
+        // Restore user info
+        if (savedUserName) {
+            userName = savedUserName;
+            $('#userName').val(userName);
+        }
+        if (savedUserGender) {
+            userGender = savedUserGender;
+            $('#userGender').val(userGender);
+        }
+        
+        // Ask user if they want to continue
+        if (confirm('We found your previous progress. Would you like to continue from where you left off?')) {
+            currentSectionIndex = data.currentSectionIndex || 0;
+            answers = data.answers || {};
+            shuffledSections = data.shuffledSections || [];
+            
+            // If shuffledSections is empty, create new ones
+            if (shuffledSections.length === 0) {
+                shuffledSections = sections.map(section => ({
+                    ...section,
+                    questions: shuffleArray(section.questions)
+                }));
+            }
+            
+            // Switch to questionnaire screen
+            $('#welcomeScreen').removeClass('active');
+            $('#questionnaireScreen').addClass('active');
+            
+            // Load current section
+            loadSection(currentSectionIndex);
+            
+            // Start auto-save
+            startAutoSave();
+        } else {
+            // Clear saved progress
+            clearSavedProgress();
+        }
+    }
+}
+
+function clearSavedProgress() {
+    localStorage.removeItem('questionnaire_progress');
+}
+
+// Save current section (manual save)
+function saveCurrentSection() {
+    const currentSection = shuffledSections[currentSectionIndex];
+    const sectionAnswers = {};
     
     currentSection.questions.forEach((q, qIndex) => {
         const key = `${currentSectionIndex}-${qIndex}`;
-        if (!answers[key].answer) {
-            allAnswered = false;
+        if (answers[key].answer) {
+            sectionAnswers[key] = answers[key];
         }
     });
     
-    if (!allAnswered) {
-        alert('Please answer all questions in this section before proceeding!');
-        return;
+    // Check if at least one question is answered
+    if (Object.keys(sectionAnswers).length === 0) {
+        alert('Please answer at least one question in this section before saving.');
+        return false;
     }
     
-    if (currentSectionIndex < sections.length - 1) {
+    // Save section to localStorage
+    saveSectionToStorage(currentSectionIndex, sectionAnswers);
+    
+    // Also save overall progress
+    saveProgress();
+    
+    alert(`Section "${currentSection.title}" has been saved successfully!`);
+    return true;
+}
+
+function saveSectionToStorage(sectionIndex, sectionAnswers) {
+    const sectionData = {
+        sectionIndex: sectionIndex,
+        sectionTitle: shuffledSections[sectionIndex].title,
+        timestamp: new Date().toISOString(),
+        userName: userName,
+        userGender: userGender,
+        answers: sectionAnswers
+    };
+    
+    // Get existing section submissions
+    let sectionSubmissions = JSON.parse(localStorage.getItem('questionnaire_section_submissions') || '[]');
+    
+    // Check if this section was already saved and update it
+    const existingIndex = sectionSubmissions.findIndex(s => 
+        s.userName === userName && s.sectionIndex === sectionIndex
+    );
+    
+    if (existingIndex >= 0) {
+        sectionSubmissions[existingIndex] = sectionData;
+    } else {
+        sectionSubmissions.push(sectionData);
+    }
+    
+    // Save back to localStorage
+    localStorage.setItem('questionnaire_section_submissions', JSON.stringify(sectionSubmissions));
+}
+
+// Next Section
+function nextSection() {
+    // NO VALIDATION - just save current progress and move on
+    saveProgress();
+    
+    if (currentSectionIndex < shuffledSections.length - 1) {
         loadSection(currentSectionIndex + 1);
     } else {
         // Submit form
@@ -685,6 +817,8 @@ function nextSection() {
 // Previous Section
 function previousSection() {
     if (currentSectionIndex > 0) {
+        // Save current progress before going back
+        saveProgress();
         loadSection(currentSectionIndex - 1);
     }
 }
@@ -700,38 +834,46 @@ function updatePrevButton() {
 
 // Update Next Button
 function updateNextButton() {
-    // Check if all questions in current section are answered
-    const currentSection = sections[currentSectionIndex];
-    let allAnswered = true;
-    
-    currentSection.questions.forEach((q, qIndex) => {
-        const key = `${currentSectionIndex}-${qIndex}`;
-        if (!answers[key].answer) {
-            allAnswered = false;
-        }
-    });
-    
-    if (currentSectionIndex === sections.length - 1) {
+    // NO VALIDATION - button is always enabled
+    if (currentSectionIndex === shuffledSections.length - 1) {
         $('#nextBtn').html('Submit <i class="fas fa-check ms-2"></i>');
     } else {
         $('#nextBtn').html('Next Section <i class="fas fa-arrow-right ms-2"></i>');
     }
     
-    $('#nextBtn').prop('disabled', !allAnswered);
+    // Button is always enabled
+    $('#nextBtn').prop('disabled', false);
 }
 
 // Submit Form
 function submitForm() {
+    // Collect all answered questions
+    const answeredQuestions = Object.values(answers).filter(a => a.answer !== null);
+    
+    if (answeredQuestions.length === 0) {
+        alert('Please answer at least one question before submitting.');
+        return;
+    }
+    
     // Prepare submission data
     const submissionData = {
         timestamp: new Date().toISOString(),
         userName: userName,
         userGender: userGender,
-        responses: Object.values(answers)
+        responses: answeredQuestions,
+        totalQuestionsAnswered: answeredQuestions.length
     };
     
     // Save to localStorage for you to view
     saveToLocalStorage(submissionData);
+    
+    // Clear saved progress after submission
+    clearSavedProgress();
+    
+    // Stop auto-save
+    if (autoSaveTimer) {
+        clearInterval(autoSaveTimer);
+    }
     
     // Show thank you screen
     $('#questionnaireScreen').removeClass('active');
@@ -751,3 +893,8 @@ function saveToLocalStorage(data) {
     
     console.log('Submission saved:', data);
 }
+
+// Call this when loading a section
+$(document).ready(function() {
+    // Ready
+});

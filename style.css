@@ -733,9 +733,6 @@ body::after {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .question-item {
-        padding: 20px; /* More room for content */
-    }
     
     .welcome-title,
     .thankyou-title {
@@ -754,18 +751,9 @@ body::after {
         font-size: 1rem;
         padding: 12px 15px;
     }
-
-    .question-text {
-        font-size: 1.1rem;
-    }
     
     .navigation-buttons {
         grid-template-columns: 1fr;
-    }
-
-    .option-btn i {
-        min-width: 25px; /* Keeps the dot icon from shrinking */
-        margin-right: 12px;
     }
     
     .navigation-buttons .btn {
